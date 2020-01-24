@@ -1,0 +1,28 @@
+# Create environment file:
+# https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually
+
+# Name used to activate environment
+name: uiuc_fdl_cpu
+
+# Places to search for packages
+channels:
+  - defaults
+  - pytorch
+  - conda-forge
+  
+# List of packages to install
+dependencies:
+    - python=3.7.*
+    - pip=20.0.*
+    - pandas
+    - matplotlib
+    - jupyter
+    - tensorflow=2.0.*
+    - keras=2.3.*
+    - pytorch
+    - torchvision
+    #- cudatoolkit=10.1
+    - scikit-learn
+    - scipy
+    - pip:      # Installed using pip manager
+        - gym
