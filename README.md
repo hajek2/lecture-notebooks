@@ -17,14 +17,34 @@ First, download and install [miniconda](https://docs.conda.io/en/latest/minicond
 
 Once installed, make sure everything is up-to-date with:
 
-```
+```bash
 conda update -n base -c defaults conda
 ```
 
-Next, download either the [uiuc_fdl_cpu.yaml](https://raw.githubusercontent.com/fdluiuc/lecture-notebooks/master/uiuc_fdl_cpu.yaml) for CPU only-training (any platform)
-or [uiuc_fdl_gpu.yaml](https://raw.githubusercontent.com/fdluiuc/lecture-notebooks/master/uiuc_fdl_gpu.yaml) for GPU enabled training (requires Windows/Linux).
+Depending on your operating syste, you may need to do additional configurations.
 
-For CPU only-training, setup using:
+In particular:
+
+- **Windows**:  Use either [Windows PowerShell](https://docs.microsoft.com/en-us/powershell/)
+   or [Windows Subsystems Linux 2.0](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)
+- **macOS**: Install Xcode CLI developer tools by opening `Terminal`, found under
+`Applications` -> `Utilities` -> `Terminal.app`, and typing:
+
+```bash
+sudo xcode-select --install
+```
+
+Having done this, please pick one of the course environments to use:
+
+- **[uiuc_fdl_cpu.yaml](https://raw.githubusercontent.com/fdluiuc/lecture-notebooks/master/uiuc_fdl_cpu.yaml)** for CPU only-training (any platform); or
+- **[uiuc_fdl_gpu.yaml](https://raw.githubusercontent.com/fdluiuc/lecture-notebooks/master/uiuc_fdl_gpu.yaml)** for GPU enabled training (requires Windows/Linux).
+
+
+We encourage installing the course environment for CPU only-training as 
+you will likely need to use cloud resources (
+[Google Colab](https://colab.research.google.com/) or 
+[HAL](https://wiki.ncsa.illinois.edu/display/ISL20/HAL+cluster)) to efficiently
+train models. 
 
 ```bash
 # Download
@@ -57,5 +77,16 @@ Grab new notebooks using:
 
 ```bash
 git pull
+```
+
+To view or modify a notebook locally, use:
+
+```
+# Change to where lecture notebooks repository
+# is stored on your computer.
+cd path/to/lecture-notebooks
+
+# Launch jupyter to view notebook
+jupyter notebook
 ```
 
